@@ -12,7 +12,15 @@ public class GunScript : MonoBehaviour
     public ParticleSystem muzzleFlash; //code for our particlesystem
     public GameObject impactEffect; //code for the effect impact
 
+    public AudioClip shootsound;
+    private AudioSource source;
+
     private float nextTimeToFire = 0f; //made so we can fire right off the bat
+
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -22,6 +30,7 @@ public class GunScript : MonoBehaviour
             {
             nextTimeToFire = Time.time + 1f / fireRate; //makes us shoot with an interval, the greater the fire rate the less time between shots
             Shoot(); //shooting code, make separate function
+            source.PlayOneShot(shootsound);
         }
     }
 
