@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//I've used thhis script on the totems
+
+using UnityEngine;
 
 public class Target : MonoBehaviour
 {

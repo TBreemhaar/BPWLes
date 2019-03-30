@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿//I've used this script on the sunsymbol
 using UnityEngine;
 
 public class CubeDoorScript : MonoBehaviour
